@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Fieldset</title>
+  <link rel="stylesheet" href="gmail2.css">
+</head>
+<body>
+  
+      <div class="maindiv">
+        <img src="Google01.png" alt="Google">
+        <h1>Sign in</h1>
+        <h3>Continue to Gmail</h3>
+        <form name="form" >
+            <div class="inputs">
+                <div class="Fields">
+                    <div class="Fieldset">
+                        <input type="text" name="email" class="Before-FS" required autocomplete="off"/>
+                        <h1 class="Fs-H"><span>Email or phone</span></h1>
+                        <label class="placeholder">Email or phone</label>
+                    </div>
+                </div>
+                <div class="Fields">
+                    <div class="Fieldset">
+                        <input type="password" name="pwd" class="Before-FS" required>
+                        <h1 class="Fs-H"><span>Password</span></h1>
+                        <label class="placeholder">Password</label>
+                    </div>
+                </div>
+            </div>
+            <button id="submit">Login</button>
+        </form>
+      </div>
+
+</body>
+<script>
+    document.getElementById('submit').onclick = function() {subm()};
+    function subm() {
+        event.preventDefault();
+        let email = document.forms["form"]["email"].value;
+        let pwd = document.forms["form"]["pwd"].value;
+        
+        console.log("Email/Phone: "+email);
+        console.log("Password: "+pwd);
+    }
+
+</script>
+</html>
